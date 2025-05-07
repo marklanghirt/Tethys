@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: Tethys
+message: >-
+  Tethys: a 3D solid-angle energy flux ocean acoustic propagation
+  model
+type: software
+authors:
+  - given-names: Mark Adam
+    family-names: Langhirt
+    orcid: 'https://orcid.org/0009-0009-3690-9236'
+  - {}
+identifiers:
+  - type: url
+    value: 'https://github.com/marklanghirt/Tethys'
+    description: github repository
+repository-code: 'https://github.com/marklanghirt/Tethys'
+url: 'https://marklanghirt.com/Tethys'
+abstract: >-
+  Tethys: a 3D solid-angle energy flux ocean acoustic
+  propagation model
+keywords:
+  - energy flux
+  - ocean acoustic
+  - acoustic propagation
+  - 3D acoustic
+  - three dimensional
+  - solid angle
+  - acoustic propagation model
+license: MIT
+version: 1.0.0
+date-released: '2025-05-22'
