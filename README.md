@@ -2,7 +2,7 @@
 
 This code is for research purposes and is distributed as open-source software, with absolutely no warranty or guarantee of any kind.
 
-COPYRIGHT: ©2025, Mark Adam Langhirt
+COPYRIGHT: ©2025, Mark Adam Langhirt \
 LICENSE: This research code is distributed under the MIT license, a copy of which is included in the code's repository or alternatively can be viewed at: [https://opensource.org/license/MIT](https://opensource.org/license/MIT).
 
 ---
