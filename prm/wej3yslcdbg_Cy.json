@@ -1,0 +1,84 @@
+{
+    "opt": {
+        "clear": 1.0,
+        "debug": 0.0,
+        "parType": "dbg",
+        "omitCore": 1.0,
+        "calcRays": 0.0,
+        "ntRays": 10.0,
+        "npRays": 10.0,
+        "botLoss": 1.0,
+        "ntSamp": 47.0,
+        "nxSamp": 48.0,
+        "nySamp": 49.0,
+        "nIsoLim": 50.0,
+        "dirKern": 1.0,
+        "maxLamb": 20.0,
+        "convType": 1.0,
+        "yConv": 1.0,
+        "ymmd": 16.0,
+        "zConv": 0.0,
+        "zmmd": 16.0,
+        "wkbLim": 1.0,
+        "finFreq": 1.0,
+        "splitTh": 1.0,
+        "splitPh": 1.0
+    },
+    "env": {
+        "c0": 1500.0,
+        "y": [
+            -4000.0,
+            0.0,
+            10000.0
+        ],
+        "H": [
+            0.0,
+            199.999634236445,
+            699.998719827557
+        ],
+        "geo": {
+            "z": [
+                NaN,
+                NaN
+            ],
+            "cp": [
+                1500.0,
+                1700.0
+            ],
+            "ap": [
+                0.0,
+                0.294117647058824
+            ],
+            "rho": [
+                1.0,
+                1.5
+            ]
+        }
+    },
+    "src": {
+        "thEps": 0.000001,
+        "phEps": 0.000001,
+        "monoAmp": 12.566370614359172,
+        "f": 25.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 100.0,
+        "pthN": 104.0,
+        "pthDegMin": 0.0,
+        "pthDegMax": 89.9,
+        "pphN": 105.0,
+        "pphDegMin": 0.0,
+        "pphDegMax": 89.9
+    },
+    "rcv": {
+        "xN": 101.0,
+        "xMin": 100.0,
+        "xMax": 25000.0,
+        "yN": 1.0,
+        "yMin": 0.0,
+        "yMax": 0.0,
+        "zN": 103.0,
+        "zMin": 0.1,
+        "zMax": 199.9
+    }
+}

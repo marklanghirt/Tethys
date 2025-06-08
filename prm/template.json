@@ -1,0 +1,92 @@
+# Copyright: ©2025, Mark Adam Langhirt
+# License: This research code is distributed under the MIT license,
+#  a copy of which is included in the code's repository 
+#  or alternatively can be viewed at https://opensource.org/license/MIT
+{
+    "opt": {
+        "clear": <bool>, # clears intermediary variables during execution to save memory
+        "debug": <bool>, # pauses executation at the end of the main computation
+        "parType": <string>, # type of parallelization: "vec","for","background","process","thread","gpu"; see "chspool.m"
+        "omitCore": <bool>, # omit one core when using thread/process parallelization
+        "calcRays": <bool>, # simulate ray trajectories and include in output data
+        "ntRays": <int>, # number of theta (elevation) angles for rays
+        "npRays": <int>, # number of phi (azimuth) angles for rays
+        "botLoss": <bool>, # calculate accumulated bottom loss along horizontal trajectories
+        "ntSamp": <int>, # number of theta sample points for interpolations
+        "nxSamp": <int>, # number of x-range sample points for interpolations
+        "nySamp": <int>, # number of y-range sample points for interpolations
+        "nIsoLim": <int>, # uniform max array length for iso-modenumber k_xy-profiles
+        "dirKern": <bool>, # calculate Lloyd Mirror directivity kernels for src/rcv near srf/bot
+        "maxLamb": <num>, # max wavelength distance from boundary for lloyd mirror directivity kernel
+        "convType": <int>, # type of convergence factor calculation: (0)off, (1)periodicGaussian, (2)dirichletKernel/cosineSummation
+        "yConv": <bool>, # compute transverse convergence factor
+        "ymmd": <num>, # transverse max modenumber difference for convergence factor
+        "zConv": <bool>, # compute vertical convergence factor
+        "zmmd": <num>, # vertical max modenumber difference for convergence factor
+        "wkbLim": <bool>, # limit WKB modal amplitudes using rough approx. of Airy function peak
+        "finFreq": <int>, # limit |theta|_min according to finite freq. approx: (0)off, (1)vac-rgd, (2)median, (3)vac-vac
+        "splitTh": <bool>, # split theta (elevation) angle domain in final integration
+        "splitPh": <bool> # split phi (azimuth) angle domain in final integration
+    },
+    "env": {
+        "c0": <num>, # watercolumn sound speed in [m/s]
+        "y": [ # transverse y-range nodes for bathymetry profile
+            <num>,
+            <num>,
+            <num>
+        ],
+        "H": [ # transverse depth values for bathymetry profile
+            <num>,
+            <num>,
+            <num>
+        ],
+        "geo": {
+            "z": [ # list of sediment layer thicknesses, first (watercolumn) and last (basement) are always NaN
+                NaN,
+                <num>,
+                NaN
+            ],
+            "cp": [ # compressive sound speed of layers in [m/s]
+                <num>,
+                <num>,
+                <num>
+            ],
+            "ap": [ # compressive attenuation of layers in [dB/kmHz]
+                <num>,
+                <num>,
+                <num>
+            ],
+            "rho": [ # medium density of layers in [g/cc]
+                <num>,
+                <num>,
+                <num>
+            ]
+        }
+    },
+    "src": {
+        "thEps": <num>, # epsilon (small number) theta (elevation) buffer to avoid integrating over 0deg and 90deg
+        "phEps": <num>, # epsilon (small number) phi (azimuth) buffer to avoid integrating over 0deg and 90deg
+        "monoAmp": <num>, # monopole amplitude, usually 4*pi to normalize pressure to 1Pa at 1m distance from source
+        "f": <num>, # temporal frequency of acoustic source signal
+        "x": <num>, # x-range position of source in [m], not used...
+        "y": <num>, # y-range position of source in [m]
+        "z": <num>, # z-depth position of source in [m]
+        "pthN": <int>, # number of absolute theta (elevation) angles for angular integration domain
+        "pthDegMin": <num>, # absolute theta (elevation) angle minimum for angular integration domain
+        "pthDegMax": <num>, # absolute theta (elevation) angle maximum for angular integration domain
+        "pphN": <int>, # number of absolute phi (azimuth) angles for angular integration domain
+        "pphDegMin": <num>, # absolute phi (azimuth) angle minimum for angular integration domain
+        "pphDegMax": <num> # absolute phi (azimuth) angle maximum for angular integation domain
+    },
+    "rcv": {
+        "xN": <int>, # number of longitudinal x-range positions for receiver grid
+        "xMin": <num>, # minimum longitudinal x-range position in [m] for receiver grid
+        "xMax": <num>, # maximum longitudinal x-range position in [m] for receiver grid
+        "yN": <int>, # number of transverse y-range positions for receiver grid
+        "yMin": <num>, # minimum transverse y-range position in [m] for receiver grid
+        "yMax": <num>, # maximum transverse y-range position in [m] for receiver grid
+        "zN": <int>, # number of vertical z-depth positions for receiver grid
+        "zMin": <num>, # minimum vertical z-depth position in [m] for receiver grid
+        "zMax": <num> # maximum vertical z-depth position in [m] for receiver grid
+    }
+}
